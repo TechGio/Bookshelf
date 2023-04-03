@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ReadingChallenge"
+    android:layout_above="@+id/bottomNavigation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/readingChallengeBanner"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="#C785D6"
+            android:gravity="center"
+            android:text="Reading Challenge"
+            android:textColor="@color/white"
+            android:textSize="28dp" />
+
+        <EditText
+            android:id="@+id/editGoalTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:hint="Enter your goal"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <Button
+                android:id="@+id/editGoalBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="Edit Goal"
+                android:textSize="16sp"
+                android:background="@drawable/shape_login_btn"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="16sp"
+                android:background="@drawable/shape_cancel_btn"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="15dp"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/progressReadingChallenge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/readingChallengeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:accessibilityPaneTitle="Read" />
+    </LinearLayout>
+</RelativeLayout>

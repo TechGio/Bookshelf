@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_above="@+id/bottomNavigation">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.BookDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--Image view for displaying our book image-->
+            <ImageView
+                android:id="@+id/idIVbook"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_margin="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <!--Text view for displaying book publisher-->
+                <TextView
+                    android:id="@+id/idTVpublisher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Publisher not available"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/idTVAuthors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Authors not available"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <!--text view for displaying number of pages of book-->
+                <TextView
+                    android:id="@+id/idTVNoOfPages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="4dp"
+                    android:text="Number of Pages not available"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <!--text view for displaying book publish date-->
+                <TextView
+                    android:id="@+id/idTVPublishDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="4dp"
+                    android:text="Publish Date not available"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--text view for displaying book title-->
+        <TextView
+            android:id="@+id/idTVTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="Title not available"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--text view for displaying book subtitle-->
+        <TextView
+            android:id="@+id/idTVSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="Subtitle not available"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--text view for displaying book description-->
+        <TextView
+            android:id="@+id/idTVDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:text="Description not available"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SELECT A SHELF"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="160dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="#454444"
+                android:layout_gravity="center"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton android:id="@+id/read"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Read"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    />
+                <RadioButton android:id="@+id/currentlyReading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Currently Reading"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+                <RadioButton android:id="@+id/wantToRead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Want To Read"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+            </RadioGroup>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:layout_gravity="center"
+                android:stepSize="1.0"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/calendarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="Add Read Date"
+                app:backgroundTint="@null"
+                android:textColor="#0025F4"/>
+
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_below="@+id/editPassword"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:background="@drawable/shape_login_btn"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                />
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            &lt;!&ndash;button for displaying book preview&ndash;&gt;
+            <Button
+                android:id="@+id/idBtnPreview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="Preview"
+                android:textAllCaps="false" />
+
+            &lt;!&ndash;button for opening buying page of the book&ndash;&gt;
+            <Button
+                android:id="@+id/idBtnBuy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="Buy"
+                android:textAllCaps="false" />
+
+        </LinearLayout>-->
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

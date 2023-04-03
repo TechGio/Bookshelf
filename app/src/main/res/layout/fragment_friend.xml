@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.Friend"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/removeFriendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_register_btn"
+        android:text="Remove Friend"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/bookReadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/removeFriendBtn"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/bookReadTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#454444" />
+
+    <Spinner
+        android:id="@+id/sortBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="220dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friendRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sortBy"
+        android:accessibilityPaneTitle="Read" />
+
+</RelativeLayout>

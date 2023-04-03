@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.MyBooks">
+
+    <EditText
+        android:id="@+id/txtReadingChallenge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="55dp"
+        android:hint="Enter your goal"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/setReadingChallengeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txtReadingChallenge"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/shape_login_btn"
+        android:text="Start the Reading Challenge"
+        app:backgroundTint="@null"
+        />
+
+    <Button
+        android:id="@+id/goToReadingChallengeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/shape_login_btn"
+        android:drawableBottom="@drawable/ic_baseline_arrow_right_alt_24"
+        android:textSize="18dp"
+        android:padding="20dp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/shelves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:text="SHELVES"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_above="@+id/read"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#454444" />
+
+    <Button
+        android:id="@+id/wantToRead"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/my_book_btn"
+        android:paddingStart="25dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="10dp"
+        android:text="Want to Read"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/currentlyReading"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wantToRead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/my_book_btn"
+        android:paddingStart="25dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="10dp"
+        android:text="Currently Reading"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/currentlyReading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/my_book_btn"
+        android:paddingStart="25dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="10dp"
+        android:text="Read"
+        android:textSize="20dp"
+        app:backgroundTint="@null" />
+
+
+
+
+</RelativeLayout>
